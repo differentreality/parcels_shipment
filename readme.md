@@ -5,6 +5,11 @@ For a given CSV file with client parcels, fit parcels into shipments. Implemenat
 2. Shipment max weight is 2311 kg
 3. No parcel weight is more than shipment max weight
 
+# How to run
+Run `./script.rb` from inside the project folder, and it will output a new file named `output-script.csv`
+
+The results from running this with the sample input csv file can be found in `samples/output-script.csv`
+
 # Results
 ## Client distribution in shipments
 `shipments.map.with_index{ |s, index| { shipment_ref: index+1, shipment_clients: s[:shipment_contents].count, shipment_weight: s[:shipment_weight], shipment_contents: s[:shipment_contents] } }`
